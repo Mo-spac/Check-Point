@@ -264,6 +264,10 @@ func main() {
 
 	println("***************")
 
+	problems_4.PrintMemory1([10]byte{'h', 'e', 'l', 'l', 'o', 16, 21, '*'})
+
+	println("***************")
+
 	problems_4.Printrevcomb()
 
 	println("***************")
