@@ -3,7 +3,7 @@ package problems_4
 import "strconv"
 
 func FromTo(from int, to int) string {
-	// isFirst := true
+
 	result := ""
 	if (0 > from || from > 99) || (0 > to || to > 99) {
 		return "Invalid\n"
@@ -52,7 +52,7 @@ func FromTo1(from int, to int) string {
 				result += ", "
 			}
 			if i < 10 {
-				result += s
+				result += "0"
 			}
 			result += s
 		}

@@ -13,6 +13,8 @@ func HashCode(dec string) string {
 	return string(result)
 }
 
+// *****************
+
 func HashCode1(dec string) string {
 	n := len(dec)
 	result := ""

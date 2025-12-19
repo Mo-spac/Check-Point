@@ -193,6 +193,20 @@ func main() {
 
 	println("***************")
 
+	fmt.Println(problems_3.HashCode("A"))
+	fmt.Println(problems_3.HashCode("AB"))
+	fmt.Println(problems_3.HashCode("BAC"))
+	fmt.Println(problems_3.HashCode("Hello World"))
+
+	println("***************")
+
+	fmt.Println(problems_3.HashCode1("A"))
+	fmt.Println(problems_3.HashCode1("AB"))
+	fmt.Println(problems_3.HashCode1("BAC"))
+	fmt.Println(problems_3.HashCode1("Hello World"))
+
+	println("***************")
+
 	fmt.Println(problems_4.IsCapitalized("Hello! How are you?"))
 	fmt.Println(problems_4.IsCapitalized("Hello How Are You"))
 	fmt.Println(problems_4.IsCapitalized("Whats 4this 100K?"))
@@ -215,20 +229,6 @@ func main() {
 	fmt.Print(problems_4.FromTo(10, 1))
 	fmt.Print(problems_4.FromTo(10, 10))
 	fmt.Print(problems_4.FromTo(100, 10))
-
-	println("***************")
-
-	fmt.Println(problems_3.HashCode("A"))
-	fmt.Println(problems_3.HashCode("AB"))
-	fmt.Println(problems_3.HashCode("BAC"))
-	fmt.Println(problems_3.HashCode("Hello World"))
-
-	println("***************")
-
-	fmt.Println(problems_3.HashCode1("A"))
-	fmt.Println(problems_3.HashCode1("AB"))
-	fmt.Println(problems_3.HashCode1("BAC"))
-	fmt.Println(problems_3.HashCode1("Hello World"))
 
 	println("***************")
 
@@ -269,6 +269,10 @@ func main() {
 	println("***************")
 
 	problems_4.Printrevcomb()
+
+	println("***************")
+
+	problems_4.Printrevcomb1()
 
 	println("***************")
 

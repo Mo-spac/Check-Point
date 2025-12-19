@@ -2,7 +2,7 @@ package problems_4
 
 func Itoa(n int) string {
 	if n == 0 {
-		return ""
+		return "0"
 	}
 
 	isNegative := false

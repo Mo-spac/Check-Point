@@ -1,6 +1,7 @@
 package problems_4
 
 func WeAreUnique(str1, str2 string) int {
+
 	if str1 == "" && str2 == "" {
 		return -1
 	}
@@ -29,6 +30,7 @@ func WeAreUnique(str1, str2 string) int {
 			count++
 		}
 	}
+
 	return count
 }
 
