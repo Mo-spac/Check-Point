@@ -4,6 +4,8 @@ import (
 	"fmt"
 
 	"github.com/01-edu/z01"
+
+	"strconv"
 )
 
 func ZipString(s string) string {
@@ -101,4 +103,32 @@ func PrintNumper(n int) {
 		PrintNumper(n / 10)
 	}
 	z01.PrintRune(rune('0' + n%10))
+}
+
+// *********** In Check Point **********
+
+func ZipString3(s string) string {
+	n := len(s)
+	if n == 0 {
+		return ""
+	}
+
+	result := ""
+	count := 1
+
+	for i := 1; i < n; i++ {
+		if s[i] == s[i-1] {
+			count++
+		} else {
+			result += strconv.Itoa(count)
+			result += string(s[i-1])
+			count = 1
+		}
+	}
+
+	// آخر مجموعة
+	result += strconv.Itoa(count)
+	result += string(s[n-1])
+
+	return result
 }

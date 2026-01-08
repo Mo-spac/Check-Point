@@ -1,11 +1,11 @@
 package main
 
 import (
+	problems_5 "check_point/problem_5"
 	problems_2 "check_point/problems_2"
 	problems_3 "check_point/problems_3"
-	"check_point/problems_4"
+	problems_4 "check_point/problems_4"
 
-	// problems_4 "check_point/problems_4"
 	"fmt"
 )
 
@@ -305,4 +305,68 @@ func main() {
 	fmt.Println(problems_4.ZipString1("Thee quuick browwn fox juumps over the laaazy dog"))
 	fmt.Println(problems_4.ZipString1("Helloo Therre!"))
 
+	fmt.Println("****************")
+
+	fmt.Println(problems_4.ZipString2("YouuungFellllas"))
+	fmt.Println(problems_4.ZipString2("Thee quuick browwn fox juumps over the laaazy dog"))
+	fmt.Println(problems_4.ZipString2("Helloo Therre!"))
+
+	fmt.Println("****************")
+
+	fmt.Println(problems_4.ZipString3("YouuungFellllas"))
+	fmt.Println(problems_4.ZipString3("Thee quuick browwn fox juumps over the laaazy dog"))
+	fmt.Println(problems_4.ZipString3("Helloo Therre!"))
+
+	fmt.Println("****************")
+
+	problems_5.Run1()
+
+	fmt.Println("****************")
+
+	problems_5.Run2()
+
+	fmt.Println("****************")
+
+	input1 := []uint{2, 3, 1, 1, 4}
+	fmt.Println(problems_5.CanJump(input1)) // true
+	input2 := []uint{3, 2, 1, 0, 4}
+	fmt.Println(problems_5.CanJump(input2)) // false
+
+	input3 := []uint{0}
+	fmt.Println(problems_5.CanJump(input3)) // true
+
+	fmt.Println("****************")
+
+	problems_5.Chunk([]int{}, 10)
+	problems_5.Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 0)
+	problems_5.Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 3)
+	problems_5.Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 5)
+	problems_5.Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 4)
+
+	fmt.Println("****************")
+
+	fmt.Println(problems_5.ConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6}))
+	fmt.Println(problems_5.ConcatAlternate([]int{2, 4, 6, 8, 10}, []int{1, 3, 5, 7, 9, 11}))
+	fmt.Println(problems_5.ConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6, 7, 8, 9}))
+	fmt.Println(problems_5.ConcatAlternate([]int{1, 2, 3}, []int{}))
+
+	fmt.Println("*****************")
+
+	fmt.Println(problems_5.ConcatSlice([]int{1, 2, 3}, []int{4, 5, 6}))
+	fmt.Println(problems_5.ConcatSlice([]int{}, []int{4, 5, 6, 7, 8, 9}))
+	fmt.Println(problems_5.ConcatSlice([]int{1, 2, 3}, []int{}))
+
+	fmt.Println(problems_5.ConcatSlice1([]int{1, 2, 3}, []int{4, 5, 6}))
+	fmt.Println(problems_5.ConcatSlice1([]int{}, []int{4, 5, 6, 7, 8, 9}))
+	fmt.Println(problems_5.ConcatSlice1([]int{1, 2, 3}, []int{}))
+
+	//fmt.Println(problems_5.ConcatSlice2([]int{1, 2, 3}, []int{4, 5, 6}))
+	//fmt.Println(problems_5.ConcatSlice2([]int{}, []int{4, 5, 6, 7, 8, 9}))
+	//fmt.Println(problems_5.ConcatSlice2([]int{1, 2, 3}, []int{}))
+
+	fmt.Println("*****************")
+
+	fmt.Println("*****************")
+	fmt.Println(problems_5.DoNotRepeat("abcdefg", "xyz"))
+	fmt.Println(problems_5.DoNotRepeat("padinton", "paqefwtdjetyiytjneytjoeyjnejeyj"))
 }
