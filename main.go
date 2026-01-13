@@ -331,9 +331,12 @@ func main() {
 	fmt.Println(problems_5.CanJump(input1)) // true
 	input2 := []uint{3, 2, 1, 0, 4}
 	fmt.Println(problems_5.CanJump(input2)) // false
-
 	input3 := []uint{0}
 	fmt.Println(problems_5.CanJump(input3)) // true
+
+	fmt.Println(problems_5.CanJump1(input1)) // true
+	fmt.Println(problems_5.CanJump1(input2)) // false
+	fmt.Println(problems_5.CanJump1(input3)) // true
 
 	fmt.Println("****************")
 
@@ -360,13 +363,29 @@ func main() {
 	fmt.Println(problems_5.ConcatSlice1([]int{}, []int{4, 5, 6, 7, 8, 9}))
 	fmt.Println(problems_5.ConcatSlice1([]int{1, 2, 3}, []int{}))
 
-	//fmt.Println(problems_5.ConcatSlice2([]int{1, 2, 3}, []int{4, 5, 6}))
-	//fmt.Println(problems_5.ConcatSlice2([]int{}, []int{4, 5, 6, 7, 8, 9}))
-	//fmt.Println(problems_5.ConcatSlice2([]int{1, 2, 3}, []int{}))
+	fmt.Println(problems_5.ConcatSlice2([]int{1, 2, 3}, []int{4, 5, 6}))
+	fmt.Println(problems_5.ConcatSlice2([]int{}, []int{4, 5, 6, 7, 8, 9}))
+	fmt.Println(problems_5.ConcatSlice2([]int{1, 2, 3}, []int{}))
 
-	fmt.Println("*****************")
+	fmt.Println(problems_5.ConcatSlice3([]int{1, 2, 3}, []int{4, 5, 6}))
+	fmt.Println(problems_5.ConcatSlice3([]int{}, []int{4, 5, 6, 7, 8, 9}))
+	fmt.Println(problems_5.ConcatSlice3([]int{1, 2, 3}, []int{}))
+
+	// fmt.Println(problems_5.ConcatSlice4([]int{1, 2, 3}, []int{4, 5, 6}))
+	// fmt.Println(problems_5.ConcatSlice4([]int{}, []int{4, 5, 6, 7, 8, 9}))
+	// fmt.Println(problems_5.ConcatSlice4([]int{1, 2, 3}, []int{}))
 
 	fmt.Println("*****************")
 	fmt.Println(problems_5.DoNotRepeat("abcdefg", "xyz"))
 	fmt.Println(problems_5.DoNotRepeat("padinton", "paqefwtdjetyiytjneytjoeyjnejeyj"))
+
+	fmt.Println("*****************")
+
+	problems_5.Run6Hidden()
+	problems_5.Run66Hidden()
+
+	fmt.Println("*****************")
+
+	problems_5.Run7Fprime()
+
 }

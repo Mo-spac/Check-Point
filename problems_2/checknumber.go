@@ -7,5 +7,4 @@ func Checknumber(arg string) bool {
 		}
 	}
 	return true
-
 }

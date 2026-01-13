@@ -3,7 +3,8 @@ package problem_5
 import "os"
 
 func isLetter(c byte) bool {
-	return 'a' <= c && c <= 'z' || 'A' <= c && c <= 'Z'
+	return 'a' <= c && c <= 'z' || 'A' <= c && c <= 'Z' // world4 => worlD4
+	// return 'a' <= c && c <= 'z' || 'A' <= c && c <= 'Z' || '0' <= c && c <= '9' // world4 => world4
 }
 
 func Run1() {
@@ -17,8 +18,8 @@ func Run1() {
 				c += 32
 			}
 
-			// if 'a' <= c && c <= 'z' && (i+1 == len(s) || s[i+1] == ' ') {
-			if 'a' <= c && c <= 'z' && (i+1 == len(s) || !isLetter(s[i+1])) {
+			if 'a' <= c && c <= 'z' && (i+1 == len(s) || s[i+1] == ' ') {
+				// if 'a' <= c && c <= 'z' && (i+1 == len(s) || !isLetter(s[i+1])) {
 				c -= 32
 			}
 			os.Stdout.WriteString(string(c))
