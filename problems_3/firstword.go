@@ -19,6 +19,55 @@ package problems_3
 // }
 
 func FirstWord(s string) string {
+
+	start := -1
+
+	// نمشي على كل الحروف من البداية
+	for i := 0; i < len(s); i++ {
+		if s[i] != ' ' && start == -1 {
+			start = i // لقينا أول حرف من أول كلمة
+		} else if s[i] == ' ' && start != -1 { // وصلنا لنهاية أول كلمة
+			return s[start:i] + "\n"
+		}
+	}
+
+	// لو النص كله كلمة واحدة أو الكلمة الأولى تمتد لنهاية النص
+	if start != -1 {
+		return s[start:] + "\n"
+	}
+
+	// النص فارغ أو كله مسافات
+	return "\n"
+}
+
+// ******************
+
+func FirstWord1(s string) string {
+
+	start := 0
+
+	// تخطي المسافات في البداية
+	for start < len(s) && s[start] == ' ' {
+		start++
+	}
+
+	if start == len(s) {
+		return "\n"
+	}
+
+	end := start
+
+	// نمشي لحد ما نقابل مسافة أو نهاية string
+	for end < len(s) && s[end] != ' ' {
+		end++
+	}
+
+	return s[start:end] + "\n"
+}
+
+// ******************
+
+func FirstWord2(s string) string {
 	word := " "
 	started := false
 	for i := 0; i < len(s); i++ {
@@ -36,24 +85,6 @@ func FirstWord(s string) string {
 }
 
 // ******************
-
-func FirstWord1(s string) string {
-	start := -1
-
-	for i := 0; i < len(s); i++ {
-		if s[i] != ' ' && start == -1 {
-			start = i
-		} else if s[i] == ' ' && start != -1 {
-			return s[start:i] + "\n"
-		}
-	}
-
-	if start != -1 {
-		return s[start:] + "\n"
-	}
-
-	return "\n"
-}
 
 // func FirstWord(s string) string {
 // 	runes := []rune(s)

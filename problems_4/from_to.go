@@ -45,7 +45,7 @@ func FromTo1(from int, to int) string {
 		return "Invalid\n"
 	}
 
-	if from <= to {
+	if from < to {
 		for i := from; i <= to; i++ {
 			s := strconv.Itoa(i)
 			if i != from {
@@ -56,7 +56,7 @@ func FromTo1(from int, to int) string {
 			}
 			result += s
 		}
-	} else {
+	} else if from > to {
 		for i := from; i >= to; i-- {
 			s := strconv.Itoa(i)
 			if i != from {
@@ -67,6 +67,10 @@ func FromTo1(from int, to int) string {
 			}
 			result += s
 		}
+	} else {
+		s := strconv.Itoa(from)
+		result += s
+
 	}
 
 	return result + "\n"
