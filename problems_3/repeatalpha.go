@@ -7,7 +7,7 @@ func RepeatAlpha(s string) string {
 		r := s[i]
 		var count int
 		if 'A' <= r && r <= 'Z' {
-			count = int(r - 'A' + 1)
+			count = int(r - 'A' + 1) // E: 69 - 65 + 1 => 5
 		} else if 'a' <= r && r <= 'z' {
 			count = int(r - 'a' + 1)
 		} else {

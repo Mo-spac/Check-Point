@@ -388,4 +388,25 @@ func main() {
 
 	problems_5.Run7Fprime()
 
+	fmt.Println("*****************")
+
+	fmt.Println(problems_5.SaveAndMiss("123456789", 3))
+	fmt.Println(problems_5.SaveAndMiss("abcdefghijklmnopqrstuvwyz", 3))
+	fmt.Println(problems_5.SaveAndMiss("", 3))
+	fmt.Println(problems_5.SaveAndMiss("hello you all ! ", 0))
+	fmt.Println(problems_5.SaveAndMiss("what is your name?", 0))
+	fmt.Println(problems_5.SaveAndMiss("go Exercise Save and Miss", -5))
+
+	fmt.Println("*****************")
+
+	problems_5.Run77inter()
+
+	fmt.Println("*****************")
+
+	problems_5.Run77union()
+
+	fmt.Println("*****************")
+
+	problems_5.Run88wdmatch()
+
 }
